@@ -1,6 +1,6 @@
 # Principles of Computer Networks
 
-> **Welcome to the Principles of Computer Networks course.**
+**Welcome to the Principles of Computer Networks course.**
 
 This course is designed as an in-person course aimed at introducing basic computer networks design concepts and protocols.
 
