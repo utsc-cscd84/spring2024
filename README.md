@@ -7,8 +7,10 @@ This course is designed as an in-person course aimed at introducing basic comput
 Lectures and Instructor’s Office Hour will be live-streamed over [Zoom](https://utoronto.zoom.us/j/85487534694).
 
 Lectures will be recorded and posted on the course website.
-> 
+>
 
+| **Instructor** | Erfan Meskar |
+| --- | --- |
 | **Instructor** | Erfan Meskar |
 | **Office Hours** | Thursday 11:30 AM - 12:30 PM and 03:30 PM - 04:30 PM, DH-3019 |
 | **Email Address** | e.meskar@utoronto.ca |
