@@ -9,15 +9,15 @@ Lectures and Instructor’s Office Hour will be live-streamed over [Zoom](https:
 Lectures will be recorded and posted on the course website.
 >
 
-| **Instructor** | Erfan Meskar |
+| | |
 | --- | --- |
 | **Instructor** | Erfan Meskar |
 | **Office Hours** | Thursday 11:30 AM - 12:30 PM and 03:30 PM - 04:30 PM, DH-3019 |
 | **Email Address** | e.meskar@utoronto.ca |
 | **Course Website** |  |
-| Programming Assignment Submission | [MarkUs](https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en) |
-| Problem Set Submission | [Crowdmark](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjY5PH1qo-MAxXKg4kEHfO2HTkQjBB6BAgPEAE&url=https%3A%2F%2Fapp.crowdmark.com%2Fsign-in&usg=AOvVaw1BliOUNBlYLMDitDswcatf&opi=89978449) |
-| Wireshark Lab Submission | [Quercus](https://q.utoronto.ca/courses/373623/quizzes) |
+| **Programming Assignment Submission** | [MarkUs](https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en) |
+| **Problem Set Submission** | [Crowdmark](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjY5PH1qo-MAxXKg4kEHfO2HTkQjBB6BAgPEAE&url=https%3A%2F%2Fapp.crowdmark.com%2Fsign-in&usg=AOvVaw1BliOUNBlYLMDitDswcatf&opi=89978449) |
+| **Wireshark Lab Submission** | [Quercus](https://q.utoronto.ca/courses/373623/quizzes) |
 
 | LEC0101 | Thu, 01:00 PM - 03:00 PM MN 2110 |
 | --- | --- |
