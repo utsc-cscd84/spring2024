@@ -9,7 +9,6 @@ Lectures and Instructor’s Office Hour will be live-streamed over [Zoom](https:
 Lectures will be recorded and posted on the course website.
 > 
 
-| --- | --- |
 | **Instructor** | Erfan Meskar |
 | **Office Hours** | Thursday 11:30 AM - 12:30 PM and 03:30 PM - 04:30 PM, DH-3019 |
 | **Email Address** | e.meskar@utoronto.ca |
