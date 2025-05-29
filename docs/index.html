@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>CSCD84 - Winter 2024</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="icon" type="image/png" href="./images/favicon.png">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CSCD84</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html#schedule">Schedule</a>
+</li>
+<li>
+  <a href="index.html#coursework">Coursework</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Syllabus
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="syllabus.html">Overview</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltextbook">Textbooks</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylassessment">Assessment and Deadlines</a>
+    </li>
+    <li>
+      <a href="syllabus.html#latedays">Lateness Policy</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylmissterm">Missed Term Work</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylremark">Remark Requests</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltut">Tutorials</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylannounce">Course Announcements</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syldisc">Discussion Board</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylcommunication">Communications</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylintegrity">Academic Integrity</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylaccommodations">Accommodations</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylspecconsider">Special Consideration</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syledi">Equity, Diversity and Inclusion</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllan">University Land Acknowledgement</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://crowdmark.com">Crowdmark</a>
+</li>
+<li>
+  <a href="https://q.utoronto.ca/courses/332889">Quercus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">CSCD84 - Winter 2024</h1>
+
+</div>
+
+
+<div id="header">
+<p><span class="header-title">CSCD84: Artificial Intelligence<br></span>
+<span class="header-subtitle">University of Toronto
+Scarborough<br>Computer &amp; Mathematical Science<br>Winter
+2024</span></p>
+<div id="header-image" class="img">
+<p><img src="images/favicon.png" /></p>
+</div>
+</div>
+<p>This course is designed as an <em>in-person</em> course aimed at
+introducing the theories and algorithms of Artificial Intelligence.
+Topics include a subset of: search, game playing, game theory, planning,
+reasoning and decision making with uncertainty, computational
+perception, and applications of Artificial Intelligence. Assignments
+provide practical experience of the core topics.</p>
+<div id="course-staff" class="section level2">
+<h2>Course Staff</h2>
+<div id="shuffleleft-container" class="col sec">
+<div class="instructorphoto">
+<div class="float">
+<img src="images/erfan_img3.png" alt="Erfan Meskar Instructor" />
+<div class="figcaption">Erfan Meskar<br>Instructor</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Ali Parchekani TA" />
+<div class="figcaption">Ali Parchekani<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Aditya Kulkarni TA" />
+<div class="figcaption">Aditya Kulkarni<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Malhar Pandya TA" />
+<div class="figcaption">Malhar Pandya<br>TA</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sechighlight">
+<div id="logistics" class="section level2 container sec">
+<h2>Logistics</h2>
+<ul>
+<li><strong>Instructor:</strong> Erfan Meskar <img
+src="images/erfan_email.jpg" alt="Erfan’s Email" /></li>
+<li><strong>Lectures:</strong>
+<ul>
+<li><strong>Monday:</strong> 9:00 AM - 11:00 AM, Room SW 309.</li>
+</ul></li>
+<li><strong>Tutorials:</strong>
+<ul>
+<li><strong>TUT0101:</strong> Tuesday, 11:00 AM - 12:00 PM, Room IC
+308</li>
+<li><strong>TUT0102:</strong> Tuesday, 3:00 PM - 4:00 PM, Room AA
+206</li>
+<li><strong>TUT0103:</strong> Tuesday, 4:00 PM - 5:00 PM, Room MW
+264</li>
+</ul></li>
+<li><strong>Office hours:</strong>
+<ul>
+<li>Erfan Meskar (<a
+href="https://utoronto.zoom.us/j/83099743199">Zoom</a>): Monday 1:00 PM
+– 3:00 PM</li>
+<li>Malhar Pandya (<a
+href="https://utoronto.zoom.us/j/87002764450">Zoom</a>): Thursday 4:00
+PM - 5:00 PM</li>
+<li>Ali Parchekani (<a
+href="https://utoronto.zoom.us/j/89752425282">Zoom</a>): Monday 6:00 PM
+– 8:00 PM</li>
+</ul></li>
+<li><strong>Contact</strong>:
+<ul>
+<li>Students should ask <em>all</em> course-related questions in course
+Piazza channels. <br></li>
+<li>For personal matters only, email instructor.</li>
+</ul></li>
+<li><strong>Announcements:</strong> All announcements will be made in
+Piazza.</li>
+</ul>
+</div>
+</div>
+<div id="coursework" class="section level2 container sec">
+<h2>Coursework</h2>
+<ul>
+<li><strong>Programming Assignments (40%)</strong>
+<ul>
+<li>There will be 4 assignments, each is worth 10%.</li>
+<li>These must be done individually and submitted on MarkUs. The
+submission deadline will be Sunday night (11:59 PM).</li>
+</ul></li>
+<li><strong>Problem Sets (10%)</strong>
+<ul>
+<li>You will complete five problem sets, each worth 2%.</li>
+<li>These must be done individually. Problem sets must be submitted on
+MarkUs, and the submission deadline will be Sunday night (11:59
+PM).</li>
+</ul></li>
+<li><strong>Midterm (15%)</strong>
+<ul>
+<li>The midterm is a closed book, 75-minute exam, and scheduled on
+Feb. 26.</li>
+<li>It will test the content of the weeks before the test.</li>
+</ul></li>
+<li><strong>Final Exam (35%)</strong>
+<ul>
+<li>The final exam is closed book, comprehensive, 3 hours, and held
+during the exam period.</li>
+<li>You must obtain at least 40% on the final exam to pass the course;
+otherwise, your final course grade will be set no higher than 47%.</li>
+</ul></li>
+</ul>
+<p>All (currently tentative) deadlines are listed in the <a
+href="#schedule">schedule</a>. Note that <strong>due dates may
+change</strong> based on how the course is progressing.</p>
+</div>
+<div id="submitting" class="container sec">
+<div id="submitting-coursework" class="section level2">
+<h2>Submitting Coursework</h2>
+<ul>
+<li>Do not submit your coursework via email.</li>
+<li>If anything goes wrong, please ask a question in Piazza or contact a
+course assistant.</li>
+<li>You can submit as many times as you’d like until the deadline: we
+will only grade the last submission.</li>
+<li>Partial work is better than not submitting any work.</li>
+</ul>
+</div>
+</div>
+<div id="latedays" class="container sec">
+<div id="late-days" class="section level2">
+<h2>Late Days</h2>
+<ul>
+<li>15% for each day up to day 3 – after 3 days the value is zero.</li>
+</ul>
+</div>
+</div>
+<div id="sylremark" class="container sec">
+<div id="regrade-requests" class="section level2">
+<h2>Regrade Requests</h2>
+<p>Regrade requests for Programming Assignments, Problem Sets, and
+Midterm are due within 1 week of receiving the graded work and must be
+submitted by posting a private question on Piazza.</p>
+<ul>
+<li>We ask that you carefully review your assignments, reflect, and
+write a short explanation justifying the reasons for a regrading
+request.</li>
+<li>If a grade is contested and we realize that the marker made a
+mistake in the student’s favour, the mark for that assignment may be
+lowered when the mistake is found. This would otherwise create a
+situation which is unfair to other students.</li>
+<li>Please include your full name and UTORid in the body of the private
+note.</li>
+</ul>
+</div>
+</div>
+<div id="rectextbook" class="container sec">
+<div id="recommended-textbooks" class="section level2">
+<h2>Recommended Textbooks</h2>
+<ul>
+<li><strong>R&amp;N:</strong> Russel and Norvig, “Artificial
+Intelligence: A Modern Approach”, 4th edition.</li>
+<li><strong>P&amp;M:</strong> Poole and Mackworth, “Artificial
+Intelligence – Foundations of Computational Agents”, 3rd edition.
+Available free on-line <a href="https://artint.info/">here</a>.</li>
+</ul>
+</div>
+</div>
+<div id="schedule" class="container sec">
+<div id="course-schedule" class="section level2">
+<h2>Course Schedule</h2>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="23%" />
+<col width="20%" />
+<col width="20%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Topics</th>
+<th align="left">Readings</th>
+<th align="left">Tutorials</th>
+<th align="left">Coursework</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">- Course Logistics<br>- Introduction to AI<br>-
+Uninformed Search</td>
+<td align="left">- <strong>R&amp;N:</strong> 3.1-3.4;<br>-
+<strong>P&amp;M:</strong> 3.1-3.5</td>
+<td align="left">No Tutorial</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">- Uninformed Search, cont’d<br>- Informed Search</td>
+<td align="left">- <strong>R&amp;N:</strong> 3.5, 3.6;<br>-
+<strong>P&amp;M:</strong> 3.6, 3.7</td>
+<td align="left">No Tutorial</td>
+<td align="left">📢 PA1 <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Jan. 28,
+11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">- Informed Search, cont’d<br>- Search Refinements<br>-
+Constraint Satisfaction Problem</td>
+<td align="left">- <strong>R&amp;N:</strong> 3.8.1, 3.8.2, 4.1-4.3;<br>-
+<strong>P&amp;M:</strong> 5.1-5.2</td>
+<td align="left">By Adi<br><a
+href="./worksheet/TUT_W03-Search_ComplementaryMaterial.pptx">slides</a></td>
+<td align="left">📢 <a href="./assignments/ps1_ha.pdf">PS1</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Jan. 28,
+11:59 PM<br>⏰ PS1 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS1 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">- Constraint Satisfaction Problem, cont’d<br>- Local
+Search</td>
+<td align="left">- <strong>R&amp;N:</strong> 5.3-5.5, 4.1;<br>-
+<strong>P&amp;M:</strong> 4.4-4.5, 4.6.1, 4.6-4.7</td>
+<td align="left">By Adi<br><a
+href="./worksheet/TUT_W04-LocalSearch_ComplementaryMaterial.pptx">slides</a></td>
+<td align="left">📢 <a href="./assignments/ps2_ha.pdf">PS2</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Feb. 4,
+11:59 PM<br>⏰ PS2 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS2 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">- Adversarial Game Search<br>- Game Theory</td>
+<td align="left">- <strong>R&amp;N:</strong> 6.1-6.5, 17-1-17.2.1;<br>-
+<strong>P&amp;M:</strong> 14.1-14.5</td>
+<td align="left">By Malhar<br><a
+href="./worksheet/TUT_W05-ProbabilityReview.pdf">Probability
+Review</a><br> - <a
+href="./worksheet/TUT_W05-ProbabilityReview-sol.pdf">solution</a></td>
+<td align="left">📢 PA2 <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Feb. 25,
+11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">- Markov Decision Process</td>
+<td align="left">- <strong>R&amp;N:</strong> 17.1 - 17.2;<br>-
+<strong>P&amp;M:</strong> 12</td>
+<td align="left">By Adi<br><a
+href="./worksheet/TUT_W06-Games_and_MDP.pptx">slides</a></td>
+<td align="left">📢 <a href="./assignments/ps3_ha.pdf">PS3</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Feb. 18,
+11:59 PM<br>⏰ PS3 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS3 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">Reading Week</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left">- Midterm Review<br>- Reinforcement Learning</td>
+<td align="left">- <strong>R&amp;N:</strong> 23.1 - 23.2;<br>-
+<strong>P&amp;M:</strong> 13.1 - 13.4</td>
+<td align="left">By Malhar<br>Reviewing the sample midterm</td>
+<td align="left">📢 <a href="./exams/mid.pdf">Sample midterm</a> <span
+style="color: green;"><strong>out</strong></span><br>📬 <span
+style="color: orange;"><strong>Sample midterm solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left"><strong>Midterm</strong></td>
+<td align="left"></td>
+<td align="left">No Tutorial</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">- Reinforcement Learning, cont’d</td>
+<td align="left">- <strong>R&amp;N:</strong> 23.3 - 23.4;<br>-
+<strong>P&amp;M:</strong> 13.5 - 13.8</td>
+<td align="left">By Malhar<br><a href="./worksheet/TUT_W09-RL.pdf">RL
+Worksheet</a><br> - <a
+href="./worksheet/TUT_W09-RL-sol.pdf">solution</a></td>
+<td align="left">📢 PA3 <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on March
+24, 11:59 PM<br>📬 <span style="color: orange;"><strong>Midterm
+solution</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left">- Bayesian Networks</td>
+<td align="left">- <strong>R&amp;N:</strong> 12, 13.1 - 13.4;<br>-
+<strong>P&amp;M:</strong> 9.1 - 9.5, 9.7</td>
+<td align="left">By Malhar<br><a
+href="./worksheet/TUT_W10-D-separation.pptx">Reviewing Bayes Net and
+D-separation</a><br><a href="./worksheet/TUT_W10-BN-worksheet.pdf">Bayes
+Net Worksheet</a><br> - <a
+href="./worksheet/TUT_W10-BN-worksheet.pdf">solution</a></td>
+<td align="left">📢 <a href="./assignments/ps4_ha.pdf">PS4</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on March
+24, 11:59 PM<br>⏰ PS4 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS4 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="left">- Bayesian Networks, cont’d<br>- Hidden Markov
+Model</td>
+<td align="left">- <strong>R&amp;N:</strong> 12, 13.1 - 13.4, 14;<br>-
+<strong>P&amp;M:</strong> 9.1 - 9.7</td>
+<td align="left">By Malhar<br><a
+href="./worksheet/TUT_W11-VEandHMM-worksheet.pdf">VE and HMM
+Worksheet</a><br> - <a
+href="./worksheet/TUT_W11-VEandHMM-worksheet-sol.pdf">solution</a></td>
+<td align="left">📢 PA4 <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on April 5,
+11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="left">- Machine Learning</td>
+<td align="left">- <strong>R&amp;N:</strong> 20.1-20.2, 19.6-19.7;<br>-
+<strong>P&amp;M:</strong> 7.1 - 7.4, 8.1</td>
+<td align="left">By Malhar<br><a
+href="./worksheet/TUT_W12-NB_Perc_LR-work.pdf">Naive Bayes and ML
+Worksheet</a><br> - <a
+href="./worksheet/TUT_W12-NB_Perc_LR-work-sol.pdf">solution</a></td>
+<td align="left">📢 <a href="./assignments/ps5_ha.pdf">PS5</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on April 8,
+11:59 PM<br>⏰ PS5 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS5 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
