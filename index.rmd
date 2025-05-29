@@ -143,7 +143,7 @@ submitted by posting a private question on Piazza.
 
 ## Course Schedule
 
-|Week | Topics        | Readings    |  Tutorials  | Coursework
+|Week | Topics        | Readings    |  Tutorial   | Coursework
 |:----|:--------------|:------------|:------------|:-----------------
 |1    | `r w01_top`   | `r w01_rea` |  `r w01_wsh`| `r w01_crw`               
 |2    | `r w02_top`   | `r w02_rea` |  `r w02_wsh`| `r w02_crw`  

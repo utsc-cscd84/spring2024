@@ -19,5 +19,8 @@ w12_crw <- join_with_break(
   out_with_due_ann("PS5", "./assignments/ps5_ha.pdf", "April 8, 11:59 PM"),
   due_ann("PS5"),
   posted_ann("PS5 solution"),
+  check_ann("Piazza", with_tab = TRUE),
+  out_no_des_ann("Sample final", "./exams/SampleFinal.pdf"),
+  posted_ann("Sample final solution"),
   check_ann("Piazza", with_tab = TRUE)
 )
