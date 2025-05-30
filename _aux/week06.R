@@ -7,7 +7,7 @@ ws <- "./worksheet/TUT_W06-Games_and_MDP.pptx"
 
 w06_top <- "- Markov Decision Process"
 
-w06_rea <- "- **R&N:** 17.1 - 17.2;<br>- **P&M:** 12"
+w06_rea <- "- <ins>R&N</ins>: 17.1 - 17.2;<br>- <ins>P&M</ins>: 12"
 
 
 w06_wsh <- join_with_break("By Adi", glue::glue("[slides]({ws})"))

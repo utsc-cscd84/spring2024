@@ -7,7 +7,7 @@ ws <- "./worksheet/TUT_W11-VEandHMM-worksheet.pdf"
 ws_sol <- "./worksheet/TUT_W11-VEandHMM-worksheet-sol.pdf"
 
 w11_top <- "- Bayesian Networks, cont'd<br>- Hidden Markov Model"
-w11_rea <- "- **R&N:** 12, 13.1 - 13.4, 14;<br>- **P&M:** 9.1 - 9.7"
+w11_rea <- "- <ins>R&N</ins>: 12, 13.1 - 13.4, 14;<br>- <ins>P&M</ins>: 9.1 - 9.7"
 
 
 w11_wsh <- join_with_break("By Malhar",

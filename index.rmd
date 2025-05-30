@@ -48,7 +48,7 @@ topics.
 ![Ali Parchekani<br>TA](./images/empty.png)
 :::
 ::: instructorphoto
-![Aditya Kulkarni<br>TA](./images/empty.png)
+![Aditya Kulkarni<br>TA](./images/Adi.webp)
 :::
 ::: instructorphoto
 ![Malhar Pandya<br>TA](./images/empty.png)
@@ -61,7 +61,7 @@ topics.
 ::: sechighlight
 ::: {#logistics .container .sec}
 ## Logistics
-- **Instructor:** Erfan Meskar ![Erfan's Email](./images/erfan_email.jpg)
+- **Instructor:** Erfan Meskar (e.meskar@utoronto.ca)
 - **Lectures:** 
   - **Monday:** 9:00 AM - 11:00 AM, Room SW 309.
 - **Tutorials:** 

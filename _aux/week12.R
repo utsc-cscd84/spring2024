@@ -7,7 +7,7 @@ ws_sol <- "./worksheet/TUT_W12-NB_Perc_LR-work-sol.pdf"
 
 w12_top <- "- Machine Learning"
 
-w12_rea <- "- **R&N:** 20.1-20.2, 19.6-19.7;<br>- **P&M:** 7.1 - 7.4, 8.1"
+w12_rea <- "- <ins>R&N</ins>: 20.1-20.2, 19.6-19.7;<br>- <ins>P&M</ins>: 7.1 - 7.4, 8.1"
 
 
 w12_wsh <- join_with_break("By Malhar",

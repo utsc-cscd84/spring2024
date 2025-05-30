@@ -5,7 +5,7 @@ ws <- "./worksheet/TUT_W04-LocalSearch_ComplementaryMaterial.pptx"
 
 w04_top <- "- Constraint Satisfaction Problem, cont'd<br>- Local Search"
 
-w04_rea <- "- **R&N:** 5.3-5.5, 4.1;<br>- **P&M:** 4.4-4.5, 4.6.1, 4.6-4.7"
+w04_rea <- "- <ins>R&N</ins>: 5.3-5.5, 4.1;<br>- <ins>P&M</ins>: 4.4-4.5, 4.6.1, 4.6-4.7"
 
 w04_wsh <- join_with_break("By Adi", glue::glue("[slides]({ws})"))
 

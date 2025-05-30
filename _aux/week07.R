@@ -3,7 +3,7 @@ source("./_aux/aux_func.R")
 
 w07_top <- "- Midterm Review<br>- Reinforcement Learning"
 
-w07_rea <- "- **R&N:** 23.1 - 23.2;<br>- **P&M:** 13.1 - 13.4"
+w07_rea <- "- <ins>R&N</ins>: 23.1 - 23.2;<br>- <ins>P&M</ins>: 13.1 - 13.4"
 
 w07_wsh <- join_with_break("By Malhar", "Reviewing the sample midterm")
 

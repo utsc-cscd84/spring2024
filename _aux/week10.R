@@ -7,7 +7,7 @@ ws_sol <- "./worksheet/TUT_W10-BN-worksheet.pdf"
 
 w10_top <- "- Bayesian Networks"
 
-w10_rea <- "- **R&N:** 12, 13.1 - 13.4;<br>- **P&M:** 9.1 - 9.5, 9.7"
+w10_rea <- "- <ins>R&N</ins>: 12, 13.1 - 13.4;<br>- <ins>P&M</ins>: 9.1 - 9.5, 9.7"
 
 
 w10_wsh <- join_with_break("By Malhar",
